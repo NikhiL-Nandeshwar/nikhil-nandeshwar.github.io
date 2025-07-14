@@ -18,6 +18,10 @@ main {
 }
 section {
     margin: 80px 0;
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: scale(1.01);
 }
 h1, h2, h3 {
     text-align: center;
@@ -74,28 +78,52 @@ h3 {
     color: #000;
 }
 
-/* --- About Me Section --- */
-.about {
+/* About, What I Do, Writing, Exploration Sections */
+.about,
+.what-i-do,
+.writing,
+.exploration {
     text-align: center;
     background: #ffffff;
     padding: 60px 20px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
-.about h2 {
+.about h2,
+.what-i-do h2,
+.writing h2,
+.exploration h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #1e293b;
 }
-.about p {
+.about p,
+.what-i-do li,
+.writing li,
+.exploration li {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.1rem;
     color: #475569;
     line-height: 1.8;
 }
+.what-i-do ul,
+.writing ul,
+.exploration ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.what-i-do li,
+.writing li,
+.exploration li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
 
-/* --- Tech Stack Section --- */
+/* Tech Stack Section */
 .tech {
     background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     padding: 60px 20px;
@@ -126,8 +154,29 @@ h3 {
     transform: scale(1.05);
     box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
+.tech-table {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+.tech-table table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+}
+.tech-table th,
+.tech-table td {
+    border: 1px solid #cbd5e1;
+    padding: 12px 16px;
+    text-align: left;
+    color: #1e293b;
+    background: #fff;
+}
+.tech-table th {
+    background-color: #e2e8f0;
+}
 
-/* --- Projects Section --- */
+/* Projects Section */
 .projects {
     padding: 60px 20px;
 }
@@ -173,7 +222,7 @@ h3 {
     background: #1d4ed8;
 }
 
-/* --- Contact Section --- */
+/* Contact Section */
 .contact {
     padding: 60px 20px;
     background: #f8fafc;
@@ -215,4 +264,10 @@ footer {
     background: #edf2f7;
     border-top: 1px solid #e2e8f0;
     margin-top: 60px;
+}
+footer .quote {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 6px;
 }
